@@ -1,0 +1,27 @@
+@import "../components/groupomaniaHeader.scss";
+@import "../components/administration.scss";
+
+.groupomania-header {
+  width: 100%;
+  height: 10vh;
+}
+
+.groupomania-main {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+@media all and (min-width: 600px) {
+  .groupomania-header {
+    max-width: 600px;
+  }
+  .groupomania-main {
+    max-width: 600px;
+  }
+  .block-navigation {
+    left: calc(50% - 298px);
+  }
+  .block-userid {
+    right: calc(50% - 298px);
+  }
+}

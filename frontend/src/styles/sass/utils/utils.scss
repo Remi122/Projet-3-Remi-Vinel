@@ -1,0 +1,66 @@
+/* Variable of Colors and Size */
+$color-primary: #fd2d01;
+$color-secondary: #ffd7d7;
+$color-tertiary: #4e5166;
+
+$color-not-valid: #d2ffdf;
+$color-valid: #2cff6c;
+$color-cancel: #ff412c;
+$color-nav: #6e96ff;
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+/* Mes Mixins */
+/* Gére l'overflow des feed et l'apparence des scrollbars */
+@mixin feed-scrollbar {
+  overflow: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: none;
+    margin: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    margin: 4px;
+    background-color: $color-primary;
+    border-radius: 8px;
+  }
+}
+
+/* --- Display flex Mixins --- */
+@mixin display-flex-content-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin display-flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin display-flex-column-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin display-flex-column-content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin display-flex-column-center-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

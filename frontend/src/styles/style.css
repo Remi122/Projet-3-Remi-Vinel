@@ -1,0 +1,628 @@
+@charset "UTF-8";
+/* Variable of Colors and Size */
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/* Mes Mixins */
+/* Gére l'overflow des feed et l'apparence des scrollbars */
+/* --- Display flex Mixins --- */
+/* General property and default property override.
+./sass/base/base_styles.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: #fd2d01;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4 {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 0.5rem;
+  background: #ffd7d7;
+}
+button:hover {
+  cursor: pointer;
+  background: #ffbebe;
+}
+
+.main-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.main-button:hover {
+  cursor: pointer;
+}
+
+.submit {
+  height: 3rem;
+  width: 100%;
+  background: #d2ffdf;
+}
+
+.pad1 {
+  padding: 1rem;
+}
+
+.valid {
+  background: #2cff6c;
+}
+
+textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+@media all and (max-width: 575px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+/* Landing Page CSS
+./sass/pages/landing-page.scss */
+.landing-page-main {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation-block {
+  max-width: 600px;
+  text-align: center;
+}
+.presentation-block h2 {
+  font-size: 2rem;
+}
+.presentation-block p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media all and (max-width: 420px) {
+  .block-logo {
+    visibility: hidden;
+  }
+}
+/* Header */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background: #fd2d01;
+}
+
+.block-logo {
+  height: 100%;
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px #fd2d01;
+  overflow: hidden;
+}
+.block-logo img {
+  width: 110%;
+}
+
+.block-title {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.block-userid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1rem;
+}
+.block-userid * {
+  font-weight: 600;
+}
+.block-userid p {
+  padding-left: 0.5rem;
+}
+
+.block-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.block-navigation button {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 0.3rem 0;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+.block-navigation button a {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media all and (max-width: 360px) {
+  .header-info * {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+.administration-header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px #4e5166;
+}
+
+.administration-feed {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.administration-feed::-webkit-scrollbar {
+  width: 8px;
+}
+.administration-feed::-webkit-scrollbar-track {
+  background: none;
+  margin: 0.5rem;
+}
+.administration-feed::-webkit-scrollbar-thumb {
+  margin: 4px;
+  background-color: #fd2d01;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  width: 100%;
+}
+thead tr {
+  background: #ffd7d7;
+  border: 0.1rem solid #4e5166;
+}
+
+tbody {
+  width: 100%;
+}
+tbody tr {
+  box-shadow: 0 0 3px #4e5166;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin: 0.4rem 0;
+}
+
+th {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tr {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+}
+
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+td button {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d2ffdf;
+}
+td button:hover {
+  background: #ff412c;
+}
+
+.name-column {
+  width: calc(50% - 50px);
+}
+
+.role-column {
+  width: calc(50% - 50px);
+}
+
+.empty-column {
+  width: 100px;
+}
+
+.groupomania-header {
+  width: 100%;
+  height: 10vh;
+}
+
+.groupomania-main {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+@media all and (min-width: 600px) {
+  .groupomania-header {
+    max-width: 600px;
+  }
+  .groupomania-main {
+    max-width: 600px;
+  }
+  .block-navigation {
+    left: calc(50% - 298px);
+  }
+  .block-userid {
+    right: calc(50% - 298px);
+  }
+}
+/* Block Connection CSS
+./sass/components/block-connection.scss */
+.login-block {
+  width: 350px;
+  margin-top: 40px;
+  padding: 0.5rem 1rem 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.login-block h2 {
+  text-align: center;
+}
+.login-block nav {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #4e5166;
+}
+.login-block button {
+  margin-bottom: 1rem;
+}
+.login-block a {
+  width: 100%;
+  text-align: center;
+}
+
+.form-input-block {
+  width: 100%;
+  margin: 0 0 1rem;
+}
+.form-input-block label {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0.5rem;
+  color: #fd2d01;
+}
+.form-input-block input {
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  border: 2px solid #4e5166;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  font-weight: 600;
+  color: #4e5166;
+}
+.form-input-block input:focus {
+  outline: none;
+  border-color: #fd2d01;
+  background: #ffd7d7;
+  color: #000;
+}
+
+.input-not-valid {
+  margin-top: 0.2rem;
+  padding: 0.3rem;
+  background: #ffd7d7;
+  border-radius: 0.3rem;
+  color: #ff412c;
+}
+.input-not-valid * {
+  color: #ff412c;
+}
+
+.color-valid {
+  background: #2cff6c;
+}
+
+.color-nav {
+  background: #6e96ff;
+}
+.color-nav:hover {
+  background: #3b71ff;
+}
+
+.succes-message {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #2cff6c;
+}
+
+.succes-message svg {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.error-message {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ff412c;
+}
+
+.error-message svg {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.feed-header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed {
+  height: calc(100% - 200px - 40px);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.feed::-webkit-scrollbar {
+  width: 8px;
+}
+.feed::-webkit-scrollbar-track {
+  background: none;
+  margin: 0.5rem;
+}
+.feed::-webkit-scrollbar-thumb {
+  margin: 4px;
+  background-color: #fd2d01;
+  border-radius: 8px;
+}
+
+.suppression-block {
+  align-items: center;
+  justify-content: center;
+}
+.suppression-block p {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.suppression-block button {
+  margin: 1rem;
+  border-radius: 0.3rem;
+}
+
+.post {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px #4e5166;
+}
+
+.name {
+  width: fit-content;
+  margin: 0.3rem 0 0;
+  padding: 0.2rem 0.7rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.date {
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  font-weight: 600;
+}
+
+.message {
+  padding: 0.5rem;
+  margin: 0 0.7rem;
+  border-top: solid 1px #4e5166;
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0 0.7rem;
+}
+.image img {
+  max-width: calc(100% - 1.4rem);
+}
+
+.post-footer {
+  width: calc(100% - 1.4rem);
+  display: flex;
+  margin: 0 0.7rem;
+  justify-content: space-between;
+  overflow: hidden;
+  border-top: solid 1px #4e5166;
+}
+
+.likeble-block {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0 0.4rem 1rem;
+}
+.likeble-block svg {
+  height: 1.5em;
+  width: 2em;
+}
+.likeble-block svg:hover {
+  cursor: pointer;
+}
+
+.liked-block {
+  display: flex;
+  margin-right: 1rem;
+}
+.liked-block p {
+  font-weight: 600;
+  padding: 0 0.5rem 0 0.2rem;
+}
+
+.disliked-block {
+  display: flex;
+}
+.disliked-block p {
+  font-weight: 600;
+  padding: 0 0.5rem 0 0.2rem;
+}
+
+.nav-edit-post {
+  height: 100%;
+}
+.nav-edit-post button {
+  margin: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.modify-button:hover {
+  background: #6e96ff;
+}
+
+.delete-button:hover {
+  background: #ff412c;
+}
+
+.feed-set-post {
+  height: 200px;
+  width: 100%;
+  padding-left: 0.5rem;
+  background: #ffd7d7;
+  border-top: solid 2px #4e5166;
+  border-right: solid 2px #4e5166;
+  border-left: solid 2px #4e5166;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.feed-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.feed-form label {
+  padding: 0.2rem;
+  color: #fd2d01;
+  font-weight: bold;
+}
+.feed-form textarea {
+  height: 6rem;
+  width: calc(100% - 100px);
+}
+.feed-form > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.feed-form > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100px;
+  padding: 0.3rem;
+}
+.feed-form button {
+  border-radius: 0.5rem;
+  background: #2cff6c;
+  font-weight: 600;
+}
+.feed-form a {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #ff412c;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+/* Landing Page CSS
+./sass/pages/landing-page.scss */
+
+.landing-page-main {
+  padding: 60px 20px;
+  @include display-flex-column-align-center;
+}
+.presentation-block {
+  max-width: 600px;
+  text-align: center;
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .block-logo {
+    visibility: hidden;
+  }
+}

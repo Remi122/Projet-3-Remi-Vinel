@@ -1,0 +1,100 @@
+/* General property and default property override.
+./sass/base/base_styles.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style-type: none;
+
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  @include display-flex-column-align-center;
+  background: #fff;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: $color-primary;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4 {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 0.5rem;
+  background: $color-secondary;
+  &:hover {
+    cursor: pointer;
+    background: darken($color: $color-secondary, $amount: 5);
+  }
+}
+.main-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submit {
+  height: 3rem;
+  width: 100%;
+  background: $color-not-valid;
+}
+
+.pad1 {
+  padding: 1rem;
+}
+
+.valid {
+  background: $color-valid;
+}
+
+textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+@media all and (max-width: 575px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,157 @@
+/* 
+Couleur : 
+    Primaire : #FD2D01
+    Secondaire : #FFD7D7
+    Tertiaire : #4E5166
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  list-style-type: none;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+
+}
+* button {
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#App {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.landing-page-header {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+}
+
+.landing-page-header h1 {
+  text-align: center;
+}
+
+.landing-page-header img {
+  width: 100%;
+}
+
+main {
+
+}
+
+.selected {
+  background-color: #FFD7D7;
+}
+
+.landing-page-nav {
+  width: 90%;
+  height: 80px;
+
+  margin: 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+
+  overflow: hidden;
+}
+
+.landing-page-nav a {
+  width: 50%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #4E5166;
+}
+
+.landing-page-nav a:hover {
+  background-color: #FD2D01;
+}
+
+.landing-page-form {
+  width: 90%;
+  margin: 5%;
+
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page-form label {
+  padding-left: 18px;
+  margin: 9px 0;
+}
+.landing-page-form input {
+  margin: 9px 18px;
+}
+
+.landing-page-form > div {
+  width: 100%;
+  height: 80px;
+
+  margin-top: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn-submit {
+  width: 50%;
+  height: 80px;
+
+  background-color:#3FCC00;
+}
+
+.btn-cancel {
+  width: 50%;
+  height: 80px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #DD0000;
+}
+form a {
+  width: 50%;
+  height: 80px;
+  font-size: 18px;
+
+}

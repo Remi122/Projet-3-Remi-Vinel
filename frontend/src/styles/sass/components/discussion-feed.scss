@@ -1,0 +1,114 @@
+.feed-header {
+  height: 40px;
+  width: 100%;
+  @include display-flex-center-center;
+  // border-bottom: solid 2px $color-tertiary;
+}
+
+.feed {
+  height: calc(100% - 200px - 40px);
+
+  @include display-flex-column;
+
+  padding: 0.5rem;
+
+  @include feed-scrollbar;
+}
+
+.suppression-block {
+  align-items: center;
+  justify-content: center;
+  p {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  button {
+    margin: 1rem;
+    border-radius: 0.3rem;
+  }
+}
+
+.post {
+  width: 100%;
+  margin: 1rem 0;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px $color-tertiary;
+}
+.name {
+  width: fit-content;
+  margin: 0.3rem 0 0;
+  padding: 0.2rem 0.7rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.date {
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  font-weight: 600;
+}
+.message {
+  padding: 0.5rem;
+  margin: 0 0.7rem;
+  border-top: solid 1px $color-tertiary;
+}
+.image {
+  width: 100%;
+  @include display-flex-center-center;
+  padding: 0.5rem;
+  margin: 0 0.7rem;
+  img {
+    max-width: calc(100% - 1.4rem);
+  }
+}
+.post-footer {
+  width: calc(100% - 1.4rem);
+  display: flex;
+  margin: 0 0.7rem;
+
+  justify-content: space-between;
+  overflow: hidden;
+  border-top: solid 1px $color-tertiary;
+}
+.likeble-block {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0 0.4rem 1rem;
+  svg {
+    height: 1.5em;
+    width: 2em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.liked-block {
+  display: flex;
+  margin-right: 1rem;
+  p {
+    font-weight: 600;
+    padding: 0 0.5rem 0 0.2rem;
+  }
+}
+.disliked-block {
+  display: flex;
+  p {
+    font-weight: 600;
+    padding: 0 0.5rem 0 0.2rem;
+  }
+}
+
+.nav-edit-post {
+  height: 100%;
+  button {
+    margin: 0.3rem;
+    border-radius: 0.3rem;
+  }
+}
+.modify-button:hover {
+  background: $color-nav;
+}
+.delete-button:hover {
+  background: $color-cancel;
+}

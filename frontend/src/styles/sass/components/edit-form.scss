@@ -1,0 +1,53 @@
+.feed-set-post {
+  height: 200px;
+  width: 100%;
+  padding-left: 0.5rem;
+
+  background: $color-secondary;
+
+  border-top: solid 2px $color-tertiary;
+  border-right: solid 2px $color-tertiary;
+  border-left: solid 2px $color-tertiary;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.feed-form {
+  @include display-flex-column;
+  height: 100%;
+  width: 100%;
+  label {
+    padding: 0.2rem;
+    color: $color-primary;
+    font-weight: bold;
+  }
+  textarea {
+    height: 6rem;
+    width: calc(100% - 100px);
+  }
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    & > div {
+      @include display-flex-column-align-center;
+      justify-content: space-evenly;
+      height: 100%;
+      width: 100px;
+      padding: 0.3rem;
+    }
+  }
+  button {
+    border-radius: 0.5rem;
+    background: $color-valid;
+    font-weight: 600;
+  }
+  a {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: $color-cancel;
+    font-weight: 600;
+  }
+}
