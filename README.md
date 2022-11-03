@@ -59,6 +59,9 @@ npm install
 npm run start
 ```
 
+### Gestion des utilsateurs et admin sur MongoDBcompass
+Se connecter avec les informations du fichier .env du dossier Backend 
+
 ### Modifier le CSS via Sass
 
 Lancer la surveillance et modification des changement apporté dans les fichier .scss
