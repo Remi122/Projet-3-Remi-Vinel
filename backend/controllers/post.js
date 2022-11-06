@@ -3,6 +3,7 @@
 /* --- IMPORT --- */
 /* model de post */
 const Post = require("../models/post");
+const User = require("../models/user") ;
 /* package 'file system' */
 const fs = require("fs");
 
@@ -91,6 +92,8 @@ exports.deletePost = (req, res, next) => {
     if (post.userId !== req.auth.userId) {
       return res.status(401).json({ error: "Requête non autorisée !" });
     }
+    const user = User.findOne({_id:req.auth.userId});
+    if(user.role === "admin") {
     if (post.imageUrl) {
       const filename = post.imageUrl.split("images/")[1];
       fs.unlink(`images/${filename}`, () => {
@@ -103,6 +106,10 @@ exports.deletePost = (req, res, next) => {
         .then((Post) => res.status(200).json({ message: "Post supprimée !" }))
         .catch((error) => res.status(403).json({ error }));
     }
+ }
+ else{
+      return res.status(403).json({error:"Vous n'êtes pas admin"}); 
+ }
   });
 };
 
